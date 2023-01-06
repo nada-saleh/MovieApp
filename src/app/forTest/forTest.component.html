@@ -1,0 +1,20 @@
+<div>
+
+  <select  [(ngModel)]="selectedCatId" (change)="filterProductById()"
+   >
+    <option
+    *ngFor="let item of allCatList"
+    [value]="item.id">
+    {{item.name}}
+
+    </option>
+
+  </select>
+
+  <!-- <h6 >{{selectedCatId}}</h6> -->
+  <div>
+    <h4 *ngFor="let item of allCatListFilter" >{{item.name}}</h4>
+
+  </div>
+
+</div>

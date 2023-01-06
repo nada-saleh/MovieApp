@@ -1,0 +1,44 @@
+<div class="container" style="margin-top: 10px">
+  <div>
+    <button
+      type="button"
+      class="btn btn-primary mb-3 float-end"
+      (click)="addNewStudent()"
+    >
+      New Student
+    </button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Student of StudentList" >
+        <td class="p-3" style="line-height: 50px" id="delete" class="class1">
+          {{ Student.name }}
+        </td>
+        <td class="class2">
+          <button
+            type="button"
+            class="btn btn-primary m-4"
+            (click)="update(Student.id)"
+          >
+            Update
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="delete(Student.id)"
+            (click)="deleteUI()"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--  -->

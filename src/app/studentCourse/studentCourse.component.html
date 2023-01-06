@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mt-sm-4" class="m-3">
+      <label class="mb-1">Student Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="studentName"
+[(ngModel)]="StudentListData.name"
+
+      />
+    </div>
+
+    <div class="col-md-4 mt-sm-4" class="m-3">
+      <label class="mb-1">Birth Date</label>
+      <input
+
+        class="form-control"
+        id="studentName"
+        type="datetime-local"
+        [(ngModel)]="StudentListData.dateofBirth"
+        />
+    </div>
+
+    <div class="col-md-3 mt-sm-4" class="m-3">
+      <label for="number" class="mb-1">Age</label>
+      <input
+        type="text"
+        class="form-control"
+        id="age"
+
+        [(ngModel)]="StudentListData.age"
+      readonly/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 mt-sm-4">
+      <label class="m-3" type="number">Class Year </label>
+      <select  [(ngModel)]="StudentListData.classId">
+        <option [value]=1>First Class</option>
+        <option [value]=2>Second Class</option>
+        <option [value]=3>Third Class</option>
+        <option [value]=4>Forth Class</option>
+      </select>
+    </div>
+
+    <div class="col-md-4 mt-sm-4 m-3">
+      <label class="mb-1">Gender</label>
+
+      <!-- <div [ngSwitch]="StudentListData.genderId" [(ngModel)]="StudentListData.genderId">
+        <div *ngSwitchCase=1 >
+          <select name="gender" type="text" class="form-control" >
+            <option  [value]='StudentListData.genderId'>Male</option>
+            <option >Female</option>
+          </select>
+        </div>
+
+        <div *ngSwitchCase=2 [(ngModel)]="StudentListData.genderId">
+          <select name="gender" type="text" class="form-control" >
+            <option >Male</option>
+            <option  [value]='StudentListData.genderId'>Female</option>
+          </select>
+        </div>
+
+        <div *ngSwitchDefault >
+          <select name="gender" type="text" class="form-control" [(ngModel)]="StudentListData.genderId">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+      </div> -->
+      <select name="gender" type="text" class="form-control" [(ngModel)]="StudentListData.genderId">
+        <option [value]=1>Male</option>
+        <option [value]=2>Female</option>
+      </select>
+
+
+      <button class="btn btn-primary m-3" style="width: 100px" (click)="updateStudentData(StudentListData)">Update</button>
+      <button class="btn btn-primary m-3" style="width: 100px" (click)="addStudent(StudentListData)">Save</button>
+    </div>
+  </div>
+
+</div>
