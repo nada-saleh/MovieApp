@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 
     <!-- <alldatapage-app ></alldatapage-app> -->
     <!-- <studentcourses-app></studentcourses-app> -->
-    <!-- <router-outlet></router-outlet> -->
-    <forTest-app></forTest-app>
+    <router-outlet></router-outlet>
+    <!-- <forTest-app></forTest-app> -->
    `
 
 })
